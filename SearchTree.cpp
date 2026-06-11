@@ -2,30 +2,23 @@
 #include <string>
 using namespace std;
 
-class Node
-{
-public:
-    string info;
-    Node *leftchild;
-    Node *rightchild;
-
-    // Constructor for the node class
-    Node(string i, Node *l, Node *r)
+    //this function searches the current node of the specified node
+    //as well as the current node of its parrent
+    void search(string element, Node *&parent, Node *&currentNode)
     {
-        info = i;
-        leftchild = l;
-        rightchild = r;
-    }
-};
+        currentNode = ROOT;
+        parent = NULL;
 
-class BinaryTree
-{
-public: 
-    Node *ROOT;
+        while((currentNode != NULL) &&
+             (currentNode->info != element))
+             {
+                parent = currentNode;
 
-    BinaryTree()
-    {
-        ROOT = NULL; // Initializing ROOT to nul
+                if (element < currentNode->info)
+                    currentNode = currentNode->leftchild;
+                else
+                    currentNode = currentNode->rightchild;
+         }
     }
-}:
+
     
