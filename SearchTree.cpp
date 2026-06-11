@@ -2,19 +2,20 @@
 #include <string>
 using namespace std;
 
-        case '1':
+
+        case '3':
         {
-            cout << "Enter a word: ";
-            string word;
-            cin >> word;
-            obj.insert(word);
+            obj.preorder(obj.ROOT);
+            break;
+        }
+        
+         case '4':
+        {
+            obj.postorder(obj.ROOT);
             break;
         }
 
-        case '2':
-        {
-            obj.inorder(obj.ROOT);
-            break;
-        }
-
+        case '5':
+            return 0;
+        
        
