@@ -3,10 +3,12 @@
 using namespace std;
 
 
-        if (parent == NULL)
+        if (element < parent->info)
         {
-            ROOT = newNode;
-            return;
+            parent->leftchild = newNode;
         }
-
-       
+        else if (element > parent->info)
+        {
+            parent->rightchild = newNode;
+        }
+  
