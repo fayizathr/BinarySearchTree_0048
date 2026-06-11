@@ -3,7 +3,10 @@
 using namespace std;
 
 
-
-        search(element, parent, currentNode);
+        if (parent == NULL)
+        {
+            ROOT = newNode;
+            return;
+        }
 
        
