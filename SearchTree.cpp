@@ -2,23 +2,26 @@
 #include <string>
 using namespace std;
 
+
+
+int main()
 {
-    void postorder(Node *ptr)
+    BinaryTree obj;
+
+    while (true)
     {
-        // perfoms the postorder traveersal of the tree
+        cout << "\nMenu" << endl;
+        cout << "1. implement insert operation" << endl;
+        cout << "2. perform inorder traversal" << endl;
+        cout << "3. perform preorder traversal" << endl;
+        cout << "4. perform postorder traversal" << endl;
+        cout << "5. exit" << endl;
+        cout << "\nEnter your choice (1-5): ";
 
-        if (ROOT == NULL)
-        {
-            cout << "Tree is empty" << endl;
-            return;
-        }
+        char ch;
+        cin >> ch;
 
-        if (ptr != NULL)
-        {
-            postorder(ptr->leftchild);
-            postorder(ptr->rightchild);
-            cout << ptr->info << " ";
-        }
-    }
-};
+        cout << endl;
 
+        switch (ch)
+       
