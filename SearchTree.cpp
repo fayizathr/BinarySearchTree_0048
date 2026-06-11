@@ -2,20 +2,13 @@
 #include <string>
 using namespace std;
 
-
-        case '3':
+        
+        default:
         {
-            obj.preorder(obj.ROOT);
+            cout << "Invalid option" << endl;
             break;
         }
-        
-         case '4':
-        {
-            obj.postorder(obj.ROOT);
-            break;
         }
-
-        case '5':
-            return 0;
-        
-       
+    }
+    return 0;
+}
