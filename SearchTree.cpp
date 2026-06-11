@@ -2,13 +2,20 @@
 #include <string>
 using namespace std;
 
+    void inorder(Node *ptr)
+    {
+        if (ROOT == NULL)
+        {
+            cout << "Tree is empty" << endl;
+            return;
+        }
 
-        if (element < parent->info)
+        if (ptr != NULL)
         {
-            parent->leftchild = newNode;
+            inorder(ptr->leftchild);
+            cout << ptr->info << " ";
+            inorder(ptr->rightchild);
         }
-        else if (element > parent->info)
-        {
-            parent->rightchild = newNode;
-        }
-  
+    }
+
+   
